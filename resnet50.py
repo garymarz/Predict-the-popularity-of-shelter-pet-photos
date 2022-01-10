@@ -66,9 +66,15 @@ test_dataloader = DataLoader(train_data, batch_size=64, shuffle=True)
 from torch import nn
 import torchvision.models as models
 
-model = models.resnet18(pretrained=False)
+# model = models.resnet18(pretrained=False)
+# model.fc = nn.Sequential(
+#                nn.Linear(512, 1000),
+#                nn.ReLU(inplace=True),
+#                nn.Linear(1000, 125),
+#                 nn.Linear(125, 1))
+model = models.resnet50(pretrained=False)
 model.fc = nn.Sequential(
-               nn.Linear(512, 1000),
+               nn.Linear(2048, 1000),
                nn.ReLU(inplace=True),
                nn.Linear(1000, 125),
                 nn.Linear(125, 1))

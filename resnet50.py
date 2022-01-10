@@ -28,7 +28,7 @@ class ImageDataset(Dataset):
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_labels.iloc[idx, 0])+'.jpg'
         image = Image.open(img_path).convert('RGB')
-        label = self.img_labels.iloc[idx, -1]
+        label = self.img_labels.iloc[idx, -1]/100 # to 0~1
         if self.transform:
             image = self.transform(image)
         if self.target_transform:

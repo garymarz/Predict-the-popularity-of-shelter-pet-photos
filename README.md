@@ -1,5 +1,5 @@
 # DeepLearning_Final
-BreadcrumbsPredict the popularity of shelter pet photos with Swim Transformer.
+Predict the popularity of shelter pet photos with Swim Transformer.
 ## [Kaggle競賽資料集](https://www.kaggle.com/c/petfinder-pawpularity-score)
 ## TIPs
 * pytorch  1.10.0 
